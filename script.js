@@ -63,10 +63,6 @@ function previousSong() {
     player.play();
 }
 
-
-
-
-
 // player = document.getElementById("audioPlayer");
 // player.src = "http://127.0.0.1:5500/music/not_long_for_this_world.mp3"
 // player.play();
