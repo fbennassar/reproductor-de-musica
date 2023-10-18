@@ -1,0 +1,35 @@
+<!-- FILEPATH: /C:/Users/PC/Documents/Programacion/URBE_curso_js/reproductor/index.html -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Music Player</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="trackList()">
+        <div id="mainContainer">
+            <img id="coverPhoto" src="http://127.0.0.1:5500/img/suicide_boys.jpg">
+
+            <audio id="audioPlayer" controls autoplay></audio>
+
+        </div>
+
+        <div id="trackList">
+
+        </div>
+
+        <form>
+            <label for="comment">Ingrese un comentario</label>
+            <textarea id="comment" type="text" placeholder="Comentario..."></textarea>
+            <button type="button" onclick="commentBox()">Enviar</button>
+        </form>
+        <div id="commentBox">
+            
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+#coverPhoto{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 15px;
+  border-radius: 20%;
+  overflow: hidden;
+  justify-content: center;
+}
+
+#audioPlayer{
+  margin: 0 auto;
+  overflow: hidden;
+  justify-content: center;
+  
+}
+
+#mainContainer {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.5); /* ultimo valor es opacidad, va de 0 a 1 */
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
