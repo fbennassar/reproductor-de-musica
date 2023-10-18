@@ -3,21 +3,21 @@ var jsonMusic = [
     {
         "Title": "Not Long For This World",
         "Artist": "Slipknot",
-        "Date": " ",
+        "Date": "2019",
         "link": "http://127.0.0.1:5500/music/not_long_for_this_world.mp3"
     },
 
     {
         "Title": "The trooper",
-        "Artist": "Metallica",
-        "Date": " ",
+        "Artist": "Iron Maiden",
+        "Date": "1983",
         "link": "http://127.0.0.1:5500/music/the_trooper.mp3"
     },
 
     {
         "Title": "Back in black",
         "Artist": "AC/DC",
-        "Date": " ",
+        "Date": "1980",
         "link": "http://127.0.0.1:5500/music/back_in_black.mp3"
     }
 ]
@@ -29,9 +29,10 @@ function trackList() {
         cont ++;
         var track = document.createElement("div");
         track.classList.add("track");
-        track.innerHTML = cont + " " + jsonMusic[i].Title + " - " + jsonMusic[i].Artist +
+        track.innerHTML = cont + " " + jsonMusic[i].Title + " - " + jsonMusic[i].Artist + " " + jsonMusic[i].Date +
         "<button class='playButton' onclick='playMusic(" + JSON.stringify(jsonMusic[i]) +")'> Play</button>";
         trackList.appendChild(track);
+
     }
 }
 function playMusic(select) {
@@ -46,6 +47,10 @@ function playMusic(select) {
             nextSong();
         }
     });
+    var songName = document.getElementById("ti");
+    songName.innerHTML = "You are listening to: " + select.Title;
+    var artist = document.getElementById("ar");
+    artist.innerHTML = select.Artist;
 }
 
 function nextSong() {
@@ -57,6 +62,10 @@ function nextSong() {
     var nextSong = jsonMusic[nextSongIndex];
     player.src = nextSong.link;
     player.play();
+    var songName = document.getElementById("ti");
+    songName.innerHTML = "You are listening to: " + nextSong.Title;
+    var artist = document.getElementById("ar");
+    artist.innerHTML = nextSong.Artist;
     
 }
 
@@ -69,6 +78,10 @@ function previousSong() {
     var previousSong = jsonMusic[previousSongIndex];
     player.src = previousSong.link;
     player.play();
+    var songName = document.getElementById("ti");
+    songName.innerHTML = "You are listening to: " + previousSong.Title;
+    var artist = document.getElementById("ar");
+    artist.innerHTML = previousSong.Artist;
 }
 
 var repeatMode = false;
