@@ -38,6 +38,14 @@ function playMusic(select) {
     var player = document.getElementById("audioPlayer");
     player.src = select.link;
     player.play();
+    player.addEventListener("ended", function() {
+        if (repeatMode == true) {
+            player.currentTime = 0;
+            player.play();
+        } else {
+            nextSong();
+        }
+    });
 }
 
 function nextSong() {
@@ -61,6 +69,18 @@ function previousSong() {
     var previousSong = jsonMusic[previousSongIndex];
     player.src = previousSong.link;
     player.play();
+}
+
+var repeatMode = false;
+
+function repeatSong() {
+    var repeatButton = document.getElementById("repeatButton");
+    repeatMode = !repeatMode;
+    if (repeatMode == true) {
+        repeatButton.classList.add("active");
+    } else {
+        repeatButton.classList.remove("active");
+    }
 }
 
 // player = document.getElementById("audioPlayer");
