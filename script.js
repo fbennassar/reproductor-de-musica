@@ -37,7 +37,30 @@ function trackList() {
 function playMusic(select) {
     var player = document.getElementById("audioPlayer");
     player.src = select.link;
+    player.play();
+}
 
+function nextSong() {
+    var player = document.getElementById("audioPlayer");
+    var currentSongIndex = jsonMusic.findIndex(function(song) {
+        return song.link === player.src;
+    });
+    var nextSongIndex = (currentSongIndex + 1) % jsonMusic.length;
+    var nextSong = jsonMusic[nextSongIndex];
+    player.src = nextSong.link;
+    player.play();
+    
+}
+
+function previousSong() {
+    var player = document.getElementById("audioPlayer");
+    var currentSongIndex = jsonMusic.findIndex(function(song) {
+        return song.link === player.src;
+    });
+    var previousSongIndex = (currentSongIndex - 1 + jsonMusic.length) % jsonMusic.length;
+    var previousSong = jsonMusic[previousSongIndex];
+    player.src = previousSong.link;
+    player.play();
 }
 
 
