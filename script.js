@@ -102,10 +102,10 @@ function repeatSong() {
 
 var commentsContainer = document.getElementById("commentBox");
 function commentBox() {
-    var commentjs = document.getElementById("comment").value;
+     var commentjs = document.getElementById("comment").value;
     var commentBoxjs = document.createElement("div");
-    commentBoxjs.innerHTML = commentjs;
+    var namejs = document.getElementById("username").value;
+    commentBoxjs.innerHTML = namejs + ": " + commentjs;
     commentsContainer.appendChild(commentBoxjs);
     commentjs.value = "";
 }
-
