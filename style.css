@@ -1,36 +1,59 @@
-#coverPhoto{
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  margin-top: 15px;
-  border-radius: 20%;
-  overflow: hidden;
-  justify-content: center;
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 0;
 }
 
-#audioPlayer{
-  margin: 0 auto;
+#coverPhoto{
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 20%;
   overflow: hidden;
+  text-align: center;
   justify-content: center;
-  
+  z-index: -1;
+  position: absolute;
+}
+
+
+#audioPlayer{
+  margin-top: 250px;
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 300px;
+  position: absolute;;
 }
 
 #mainContainer {
-  width: 800px;
-  height: 800px;
+  width: 400px;
+  height: 400px;
   background-color: rgba(0, 0, 0, 0.5); /* ultimo valor es opacidad, va de 0 a 1 */
   opacity: 0.8;
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  border-radius: 15%;
 }
 
 .skipbuttons {
-  width: 50px;
+  width: 60px;
   height: 50px;
   margin: 0 auto;
   margin-top: 15px;
   border-radius: 20%;
   overflow: hidden;
   justify-content: center;
+}
+
+#repeatButton.active {
+  background-color: yellow;
+  color: black;
+}
+
+#commentBox {
+  border-style: solid;
 }

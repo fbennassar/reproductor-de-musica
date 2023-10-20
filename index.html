@@ -12,30 +12,33 @@
     </head>
     <body onload="trackList()">
         <div id="mainContainer">
-            <img id="coverPhoto" src="http://127.0.0.1:5500/img/suicide_boys.jpg">
+            
+            <img id="coverPhoto">
+            
 
             <audio id="audioPlayer" controls autoplay></audio>
 
-            <div id="ar"></div>
-            <div id="ti"></div>
-
-            <button class="skipbuttons" type="button" onclick="nextSong()">Skip ></button>
+            
             <button class="skipbuttons" type="button" onclick="previousSong()">Skip <</button>
-            <button class="skipbuttons" type="button" onclick="repeatSong()">Repeat</button>
-
+            <button class="skipbuttons" type="button" onclick="nextSong()">Skip ></button>
+            <button class="skipbuttons" id="repeatButton" type="button" onclick="repeatSong()">Repeat</button>
+            
         </div>
-
+        <div id="ar"></div>
+        <div id="ti"></div>
+        <br>
         <div id="trackList">
 
         </div>
 
         <form>
-            <label>Ingrese su nombre</label>
-            <input type="text" id="username">
-            <label for="comment">Ingrese un comentario</label>
-            <textarea id="comment" type="text" placeholder="Comentario..."></textarea>
-            <button type="button" onclick="commentBox()">Enviar</button>
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Username...">
+            <label for="comment">Enter a comment</label>
+            <textarea id="comment" type="text" placeholder="Comment..."></textarea>
+            <button type="button" onclick="commentBox()">Send</button>
         </form>
+        <br>
         <div id="commentBox">
             
         </div>
